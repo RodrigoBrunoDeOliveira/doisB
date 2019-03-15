@@ -75,6 +75,8 @@
 
       .introduction-swiper {
         display: flex;
+        margin: auto;
+        width: fit-content;
 
         .introduction-swiper-left, .introduction-swiper-right {
           border: 2px solid $grey-01;
@@ -89,10 +91,10 @@
           cursor: pointer;
           z-index: 10;
 
-          &:before {
-            content: '\f14f';
-          }
+          &:hover { color: $grey-01; }
         }
+
+        .introduction-swiper-right { margin-left: 7px; }
       }
     }
   }
