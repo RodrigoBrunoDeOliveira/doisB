@@ -1,0 +1,12 @@
+@import '../../assets/variables';
+
+.main-header {
+    background-color: $black-02;
+    width: 100%;
+    height: 48px;
+
+    h1 {
+        color: $white-01;
+        font-size: 30px;
+    }
+}
