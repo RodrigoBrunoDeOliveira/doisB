@@ -4,7 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "doisB": {
-      "root": "",
+      "root": "src",
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
@@ -29,6 +29,11 @@
             "styles": [
               "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets/style"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
