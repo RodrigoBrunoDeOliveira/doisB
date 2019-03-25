@@ -7,6 +7,6 @@ html, body {
     font-family: montserrat, -apple-system, BlinkMacSystemFont, segoe ui , Roboto, helvetica neue, Arial,sans-serif;
 }
 
-h1 {
-    margin: 0;
-}
+h1 { margin: 0; }
+
+input:focus { outline: none; }

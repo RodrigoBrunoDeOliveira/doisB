@@ -1,0 +1,77 @@
+@import 'variables';
+
+.leed-panel {
+	padding: 0 15px;
+		
+  .leed-panel-title {
+    font-size: 24px;
+		line-height: 1.4;
+		color: $black-04;
+		font-weight: 700;
+    font-family: montserrat,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -.02em;
+	}
+	
+	.leed-panel-message {
+		color: $yellow-01;
+		font-size: 15px;
+		line-height: 1.46667;
+		margin-top: 12px;
+	}
+
+	.leed-panel-submit {
+		padding: 20px;
+		background: $black-01;
+		border-radius: 7px;
+		
+		.submit-form {
+			.submit-form-name, .submit-form-email, .submit-form-phone {
+				label {
+					color: $white-01;
+					font-size: 15px;
+					font-weight: 500;
+					line-height: 24px;
+					letter-spacing: -.02em;
+					pointer-events: none;
+				}
+
+				input {
+					width: 100%;
+					padding: 9px 0;
+					font-size: 15px;
+					font-weight: 500;
+					line-height: 24px;
+					letter-spacing: -.02em;
+					border: 0 solid $shadow-02;
+					border-bottom-width: 1px;
+					background-color: transparent;
+				}
+
+				span {
+					display: none;
+				}
+			}
+
+			.submit-form-button {
+				width: 100%;
+				margin-top: 30px;
+
+				button {
+					color: $white-01;
+					background-color: $yellow-01;
+					border-color: $yellow-01;
+					border: none;
+					padding: 10px 30px;
+					font-size: 12px;
+					line-height: 1.5;
+					font-family: montserrat,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+					font-weight: 700;
+					letter-spacing: -.02em;
+					text-transform: uppercase;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

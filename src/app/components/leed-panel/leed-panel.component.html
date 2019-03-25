@@ -1,0 +1,37 @@
+<div class="leed-panel">
+  <h3 class="leed-panel-title">{{ title }}</h3>
+
+  <h6 class="leed-panel-message">{{ message }}</h6>
+
+  <div class="leed-panel-submit">
+    <form class="submit-form">
+      <!-- TODO: ajustar posicionamento dos elementos -->
+      <div class="submit-form-name">
+        <!-- TODO: Ajustar para a label sair no focus do input e quando tiver conteudo -->
+        <label for="{{ name + '-name'}}">Nome</label>
+        <!-- TODO: ajustar estilo da fonte interna do input -->
+        <!-- TODO: corrir border-bottom -->
+        <input id="{{ name + '-name'}}" type="text">
+        <!-- inplementar validacao do form para aparecer o span -->
+        <span>The text field is required.</span>
+      </div>
+
+      <div class="submit-form-email">
+        <label for="{{ name + '-email'}}">Email</label>
+        <input id="{{ name + '-email'}}" type="text">
+        <span>The text field is required.</span>
+      </div>
+
+      <div class="submit-form-phone">
+        <label for="{{ name + '-phone'}}">Phone</label>
+        <input id="{{ name + '-phone'}}" type="text">
+        <span>The text field is required.</span>
+      </div>
+
+      <div class="submit-form-button">
+        <!-- TODO: criar evento de submit -->
+        <button>submit</button>
+      </div>
+    </form>
+  </div>
+</div>

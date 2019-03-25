@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { EventEmitter } from 'protractor';
 
+// TODO: falta fazer trocar a imagem a cada 3s
 @Component({
   selector: 'app-swiper',
   templateUrl: './swiper.component.html',

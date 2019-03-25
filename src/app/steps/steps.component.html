@@ -1,0 +1,17 @@
+<div class="steps">
+  <h6 class="steps-subtitle">4 steps to a new home</h6>
+
+  <h1 class="steps-title">
+    How we Do <span>It</span>
+  </h1>
+
+  <div [ngSwitch]="switchValues">
+    <div *ngSwitchCase="'ops'">
+      <app-panel></app-panel>
+    </div>
+    <div *ngSwitchCase="'ufa'">ufa</div>
+  </div>
+
+  <button (click)="switchValues = 'ops'">ops</button>
+  <button (click)="switchValues = 'ufa'">ufa</button>
+</div>

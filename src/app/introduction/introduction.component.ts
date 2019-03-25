@@ -29,18 +29,18 @@ export class IntroductionComponent {
   }
 
   public nextImg(): void {
-    // for(let i = 0; this.swiper.length >= i; i++) {
-    //   if(this.swiper[i].active) {
-    //     if(this.swiper[i + 1]) {
-    //       this.swiper[i + 1].active = true;
-    //       this.swiper[i].active = false;
-    //       return;
-    //     } else if(!this.swiper[i + 1]) {
-    //       this.swiper[0].active = true;
-    //       this.swiper[i].active = false;
-    //       return;
-    //     }
-    //   };
-    // }
+    for(let i = 0; this.swiper.length >= i; i++) {
+      if(this.swiper[i].active) {
+        if(this.swiper[i + 1]) {
+          this.swiper[i + 1].active = true;
+          this.swiper[i].active = false;
+          return;
+        } else if(!this.swiper[i + 1]) {
+          this.swiper[0].active = true;
+          this.swiper[i].active = false;
+          return;
+        }
+      };
+    }
   }
 }

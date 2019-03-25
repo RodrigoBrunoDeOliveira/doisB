@@ -1,0 +1,51 @@
+@import 'variables';
+
+.card-icon {
+	.card-icon-img {
+		font-size: 50px;
+		text-align: center;
+		margin-bottom: 12px;
+	}
+
+  .card-icon-title {
+		font-weight: 700;
+		font-size: 15px;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+		color: $black-04;
+		margin: 0 0 12px 0;
+		text-align: center;
+
+		&:hover {
+			position: relative;
+			transform: translateY(5px);
+			will-change: transform;
+			transition: all .3s ease;
+		}
+
+		a:after {
+			position: absolute;
+			content: '';
+			bottom: -4px;
+			left: 0;
+			width: 0;
+			height: 0;
+			border-top: 1px solid;
+			transition: inherit;
+		}
+	}
+
+	.card-icon-text {
+		text-align: center;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: $shadow-01;
+    background-color: $white-01;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+	}
+}
