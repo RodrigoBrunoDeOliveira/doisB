@@ -8,31 +8,31 @@
     .introduction-container {
       padding: 30px 15px;
 
-      &:before {
-        width: 54%;
-        border-width: 0 1px;
-        transform: translate3d(-50%, 0, 0);
-        position: absolute;
-        content: '';
-        top: 0;
-        left: 50%;
-        bottom: 0;
-        border: 0 solid rgba(255, 255, 255, 0.05);
-        pointer-events: none;
-        z-index: -1;
-      }
+      // TODO: Linha de fundo
+      // &:before {
+      //   width: 54%;
+      //   border-width: 0 1px;
+      //   position: absolute;
+      //   content: '';
+      //   top: 0;
+      //   left: 50%;
+      //   bottom: 0;
+      //   border: 0 solid rgba(255, 255, 255, 0.05);
+      //   pointer-events: none;
+      //   z-index: -1;
+      // }
       
-      &:after {
-        border-left-width: 1px;
-        position: absolute;
-        content: '';
-        top: 0;
-        left: 50%;
-        bottom: 0;
-        border: 0 solid rgba(255,255,255,.05);
-        pointer-events: none;
-        z-index: -1;
-      }
+      // &:after {
+      //   border-left-width: 1px;
+      //   position: absolute;
+      //   content: '';
+      //   top: 0;
+      //   left: 50%;
+      //   bottom: 0;
+      //   border: 0 solid rgba(255,255,255,.05);
+      //   pointer-events: none;
+      //   z-index: -1;
+      // }
   
       .introduction-article {
         text-transform: uppercase;
@@ -55,15 +55,19 @@
         }
 
         .introduction-contact {
-          padding: 10px 30px;
-          font-size: 12px;
-          line-height: 1.5;
-          border: 1px solid $yellow-01;
-          font-weight: 700;
-          letter-spacing: -.02em;
-          cursor: pointer;
-          transition: 250ms all ease-in-out;
-          color: $white-01;
+          margin-top: 20px;
+
+          .introduction-button {
+            padding: 10px 30px;
+            font-size: 12px;
+            line-height: 1.5;
+            border: 1px solid $yellow-01;
+            font-weight: 700;
+            letter-spacing: -.02em;
+            cursor: pointer;
+            transition: 250ms all ease-in-out;
+            color: $white-01;
+          }
         }
       }
     }

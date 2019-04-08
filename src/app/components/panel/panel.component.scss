@@ -1,0 +1,23 @@
+@import 'variables';
+
+.panel {
+
+  .panel-title {
+    color: $yellow-01;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+
+  .panel-text {
+    text-align: center;
+    font-family: montserrat,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: -.02em;
+    color: $grey-02;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-align: left;
+  }
+}

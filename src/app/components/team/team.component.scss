@@ -1,0 +1,89 @@
+@import 'variables';
+
+.team {
+	padding: 50px 0;
+	background-color: $white-02;
+
+	.team-container {
+		padding: 0 15px;
+
+		.team-title, .team-subtitle {
+			font-weight: 700;
+			font-family: montserrat,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+			text-transform: uppercase;
+			letter-spacing: -.02em;
+			margin: 0;
+			text-align: center;
+		}
+		
+		.team-title {
+			color: $black-04;
+			font-size: 24px;
+		}
+
+		.team-subtitle {
+			color: $yellow-01;
+			font-size: 15px;
+			margin-top: 12px;
+		}
+
+		.team-article {
+			margin-top: 30px;
+
+			.team-figure {
+				display: grid;
+
+				img { max-width: 100%; }
+			}
+
+			.team-body {
+				background-color: $white-01;
+				padding: 6px 15px 4px;
+				
+				h5 {
+					margin: 0;
+					font-weight: 700;
+					font-family: montserrat,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+					text-transform: uppercase;
+					letter-spacing: -.02em;
+					color: $black-04;
+					font-size: 16px;
+				}
+			}
+
+			.team-footer {
+
+				.team-status {
+					font-weight: 500;
+					color: $yellow-01;
+					font-family: montserrat,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+					font-size: 13px;
+					line-height: 1.6;
+					letter-spacing: -.02em;
+					-webkit-font-smoothing: subpixel-antialiased;
+				}
+
+				.team-name {
+					font-weight: 700;
+					font-family: montserrat,-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,sans-serif;
+					text-transform: uppercase;
+					letter-spacing: -.02em;
+					font-size: 32px;
+					line-height: 1;
+					color: $black-06;
+
+					span:after {
+						display: inline-block;
+						content: '';
+						height: 0;
+						width: 20%;
+						border-top: 1px solid $black-04;
+						position: relative;
+						top: -10px;
+						right: 57%;      
+					}
+				}
+			}
+		}
+	}
+}

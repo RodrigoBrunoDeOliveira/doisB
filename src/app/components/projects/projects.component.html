@@ -1,0 +1,20 @@
+<section class="projects">
+  <div class="projects-container">
+    <div class="projects-header">
+      <h1>pro<span>jects</span></h1>
+      <p>Below you can take a look at our featured and recent projects that have been numerously awarded for our unique architectural approach.</p>
+    </div>
+
+    <div class="projects-line"></div>
+
+    <div class="projects-swiper">
+      <app-swiper
+        [swiper]="swiper"
+      ></app-swiper>
+    </div>
+
+    <div class="projects-dots">
+      <div *ngFor="let item of swiper; let i = index" [class.active]="item.active" class="projects-dots-point" (click)="chooseSwiper(i)"></div>
+    </div>
+  </div>
+</section>

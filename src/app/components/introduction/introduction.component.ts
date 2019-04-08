@@ -1,3 +1,4 @@
+import { Swiper } from './../../interfaces/swiper';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./introduction.component.scss']
 })
 export class IntroductionComponent {
-  public swiper: any = [
+  public swiper: Swiper = [
     { active: true, img: '../../../assets/images/img_01.webp'},
     { active: false, img: '../../../assets/images/img_02.webp'},
     { active: false, img: '../../../assets/images/img_03.webp'},

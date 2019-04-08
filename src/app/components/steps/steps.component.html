@@ -1,0 +1,65 @@
+<!-- TODO: animacao -->
+<!-- TODO: linha de fundo -->
+<section class="steps">
+  <div class="steps-container">
+    <h6 class="steps-subtitle">4 steps to a new home</h6>
+  
+    <h1 class="steps-title">
+      How we Do <span>It</span>
+    </h1>
+  
+    <div [ngSwitch]="switchValues">
+      <div *ngSwitchCase="0">
+        <app-panel
+          [text]="json.costumer.text"
+          [title]="json.costumer.title"
+        ></app-panel>
+      </div>
+  
+      <div *ngSwitchCase="1">
+        <app-panel
+          [text]="json.development.text"
+          [title]="json.development.title"
+        ></app-panel>
+      </div>
+  
+      <div *ngSwitchCase="2">
+        <app-panel
+          [text]="json.working.text"
+          [title]="json.working.title"
+        ></app-panel>
+      </div>
+  
+      <div *ngSwitchCase="3">
+        <app-panel
+          [text]="json.finishing.text"
+          [title]="json.finishing.title"
+        ></app-panel>
+      </div>
+    </div>
+  
+    <ul class="steps-list">
+      <li *ngFor="let option of options; let i = index" [class.active]="i === switchValues">
+        <a class="steps-menu-list" (click)="switchValues = i">{{ option }}</a>
+      </li>
+    </ul>
+  
+    <div [ngSwitch]="switchValues" class="steps-images">
+      <div *ngSwitchCase="0">
+        <img src="../../assets/images/img_01.webp">
+      </div>
+  
+      <div *ngSwitchCase="1">
+        <img src="../../assets/images/img_02.webp">
+      </div>
+  
+      <div *ngSwitchCase="2">
+        <img src="../../assets/images/img_03.webp">
+      </div>
+  
+      <div *ngSwitchCase="3">
+        <img src="../../assets/images/img_01.webp">
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+<article class="swiper-profile" *ngFor="let item of swiper">
+  <div class="swiper-card" *ngIf="item.active">
+    <div class="swiper-card">{{ item.swiperData.text }}</div>
+  
+    <div class="swiper-user">
+      <div class="swiper-left">
+        <img src="{{ item.img }}">
+      </div>
+  
+      <div class="swiper-right">
+        <div class="swiper-name">{{ item.swiperData.name }}</div>
+        <div class="swiper-office">{{ item.swiperData.office }}</div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<div class="swiper-dots">
+  <div  *ngFor="let dot of swiper; let i = index" class="swiper-dot" [class.active]="dot.active" (click)="changeSwiper(i)"></div>
+</div>

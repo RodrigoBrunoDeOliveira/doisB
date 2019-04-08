@@ -1,5 +1,5 @@
+import { Swiper, SwiperData } from './../../interfaces/swiper';
 import { Component, Input } from '@angular/core';
-import { EventEmitter } from 'protractor';
 
 // TODO: falta fazer trocar a imagem a cada 3s
 @Component({
@@ -8,7 +8,7 @@ import { EventEmitter } from 'protractor';
   styleUrls: ['./swiper.component.scss']
 })
 export class SwiperComponent {
-  @Input() swiper: any;
+  @Input() swiper: Swiper;
 
   public nextImg(): void {
     for(let i = 0; this.swiper.length >= i; i++) {

@@ -1,0 +1,39 @@
+@import 'variables';
+
+.cards-resume {
+	padding: 0 15px;
+	margin-bottom: 30px;
+	text-align: center;
+
+	.cards-resume-header {
+		text-transform: uppercase;
+		font-weight: 700;
+
+		.resume-header-number { font-size: 32px; }
+
+		.cards-resume-title {
+			color: $black-04;
+
+			&:after {
+				display: block;
+				content: '';
+				margin-left: auto;
+				margin-right: auto;
+				width: 18px;
+				height: 4px;
+				margin-top: 6px;
+				background: $yellow-01;
+			}
+		}
+	}
+
+	.cards-resume-text {
+		margin-top: 10px;
+		font-size: 13px;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: -.02em;
+    color: $shadow-01;
+    -webkit-font-smoothing: subpixel-antialiased;
+	}
+}

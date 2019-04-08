@@ -1,5 +1,22 @@
 <div class="swiper">
   <div class="swiper-container" *ngFor="let item of swiper">
-    <img src="{{ item.img }}"  *ngIf="item.active" class="swiper-image">
+    <div class="swiper-figure">
+      <img src="{{ item.img }}"  *ngIf="item.active" class="swiper-image">
+    </div>
+
+    <div *ngIf="item?.swiperData && item.active" class="swiper-swiperData">
+      <ul class="swiper-list">
+        <li>
+          <span>{{ item.swiperData.date }}</span>
+        </li>
+        <li>
+          <span>{{ item.swiperData.type }}</span>
+        </li>
+      </ul>
+  
+      <h3 class="swiper-title">{{ item.swiperData.title }}</h3>
+  
+      <p class="swiper-text">{{ item.swiperData.text }}</p>
+    </div>
   </div>
 </div>

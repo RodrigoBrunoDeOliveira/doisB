@@ -27,6 +27,7 @@
 		
 		.submit-form {
 			.submit-form-name, .submit-form-email, .submit-form-phone {
+
 				label {
 					color: $white-01;
 					font-size: 15px;
@@ -34,6 +35,8 @@
 					line-height: 24px;
 					letter-spacing: -.02em;
 					pointer-events: none;
+					position: relative;
+					top: 40px;
 				}
 
 				input {
@@ -46,10 +49,26 @@
 					border: 0 solid $shadow-02;
 					border-bottom-width: 1px;
 					background-color: transparent;
+
+					&:focus ˜ input { visibility: hidden; }
+
+					&.invalid { border-color: $red-01; }
 				}
 
-				span {
-					display: none;
+				.error-message {
+					z-index: 11;
+					margin-top: 2px;
+					font-size: 9px;
+					font-weight: 400;
+					line-height: 12px;
+					letter-spacing: 0;
+					color: $red-01;
+					transition: .3s;
+					text-align: end;
+					visibility: hidden;
+					display: block;
+
+					&.invalid { visibility: visible; }
 				}
 			}
 

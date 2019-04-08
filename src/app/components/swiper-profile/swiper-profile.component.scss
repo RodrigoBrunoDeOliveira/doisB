@@ -1,0 +1,65 @@
+@import 'variables';
+
+.swiper-profile {
+	max-width: 100%;
+
+	.swiper-card {
+		.swiper-card {
+			font-size: 18px;
+			line-height: 1.4;
+			font-weight: 400;
+			text-transform: none;
+			letter-spacing: -0.02em;
+			color: $white-01;
+			text-align: center;
+		}
+
+		.swiper-user {
+			display: flex;
+
+			.swiper-left {
+				width: 50%;
+				
+				img {
+					border-radius: 20px;
+					max-width: 100%;
+				}
+			}
+
+			.swiper-right {
+				font-size: 13px;
+				margin: auto 0 15px 25px;
+
+				.swiper-name {
+					color: $white-01;
+					font-weight: 700;
+					text-transform: uppercase;
+				}
+
+				.swiper-office {
+					color: $yellow-01;
+					margin-top: 4px;
+					line-height: 1.6;
+					font-weight: 400;
+					letter-spacing: -0.02em;
+				}
+			}
+		}
+	}
+}
+
+.swiper-dots {
+	display: flex;
+	margin: 0 auto;
+	width: fit-content;
+	
+	.swiper-dot {
+		border: 6px solid $grey-04;
+		cursor: pointer;
+    border-radius: 50%;
+    width: 1px;
+    margin: 0 10px;
+		
+		&.active { border-color: $yellow-01; }
+	}
+}

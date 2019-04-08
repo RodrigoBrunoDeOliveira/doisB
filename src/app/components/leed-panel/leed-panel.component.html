@@ -4,33 +4,32 @@
   <h6 class="leed-panel-message">{{ message }}</h6>
 
   <div class="leed-panel-submit">
-    <form class="submit-form">
+    <form class="submit-form" [formGroup]="form" (ngSubmit)="onSubmit()">
       <!-- TODO: ajustar posicionamento dos elementos -->
       <div class="submit-form-name">
         <!-- TODO: Ajustar para a label sair no focus do input e quando tiver conteudo -->
-        <label for="{{ name + '-name'}}">Nome</label>
+        <label for="name">Nome</label>
         <!-- TODO: ajustar estilo da fonte interna do input -->
         <!-- TODO: corrir border-bottom -->
-        <input id="{{ name + '-name'}}" type="text">
-        <!-- inplementar validacao do form para aparecer o span -->
-        <span>The text field is required.</span>
+        <input type="text" formControlName="name" [ngClass]="invalidField('name')">
+        <span class="error-message" [ngClass]="invalidField('name')">Campo obrigatório</span>
       </div>
 
       <div class="submit-form-email">
-        <label for="{{ name + '-email'}}">Email</label>
-        <input id="{{ name + '-email'}}" type="text">
-        <span>The text field is required.</span>
+        <label for="email">Email</label>
+        <input id="email" type="text" formControlName="email" [ngClass]="invalidField('email')">
+        <span class="error-message" [ngClass]="invalidField('email')">Email invalido</span>
       </div>
 
       <div class="submit-form-phone">
-        <label for="{{ name + '-phone'}}">Phone</label>
-        <input id="{{ name + '-phone'}}" type="text">
-        <span>The text field is required.</span>
+        <label for="phone">Phone</label>
+        <input id="phone" type="text" formControlName="phone" mask="(00) 00009-0000" [ngClass]="invalidField('phone')">
+        <span class="error-message" [ngClass]="invalidField('phone')">Campo obrigatório</span>
       </div>
 
       <div class="submit-form-button">
         <!-- TODO: criar evento de submit -->
-        <button>submit</button>
+        <button type="submit">submit</button>
       </div>
     </form>
   </div>
