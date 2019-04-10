@@ -46,19 +46,23 @@
   
     <div [ngSwitch]="switchValues" class="steps-images">
       <div *ngSwitchCase="0">
-        <img src="../../assets/images/img_01.webp">
+        <img *ngIf="screen === 'desktop'" src="../../assets/images/img_01.webp">
+        <img *ngIf="screen === 'mobile' || screen === 'tablet'" src="../../assets/images/img_01.jpg">
       </div>
   
       <div *ngSwitchCase="1">
-        <img src="../../assets/images/img_02.webp">
+        <img *ngIf="screen === 'desktop'" src="../../assets/images/img_02.webp">
+        <img *ngIf="screen === 'mobile' || screen === 'tablet'" src="../../assets/images/img_02.jpg">
       </div>
   
       <div *ngSwitchCase="2">
-        <img src="../../assets/images/img_03.webp">
+        <img *ngIf="screen === 'desktop'" src="../../assets/images/img_03.webp">
+        <img *ngIf="screen === 'mobile' || screen === 'tablet'" src="../../assets/images/img_03.jpg">
       </div>
   
       <div *ngSwitchCase="3">
-        <img src="../../assets/images/img_01.webp">
+        <img *ngIf="screen === 'desktop'" src="../../assets/images/img_01.webp">
+        <img *ngIf="screen === 'mobile' || screen === 'tablet'" src="../../assets/images/img_01.jpg">
       </div>
     </div>
   </div>

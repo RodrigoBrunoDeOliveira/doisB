@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScreenService } from 'src/app/services/screen.service';
 
 @Component({
   selector: 'app-steps',
@@ -36,11 +37,20 @@ export class StepsComponent {
       "title": "building your home"
     }
   };  
+
   public options: any = [
     'acquaintance with the customer',
     'project concept development',
     'working on interior and exterior',
     'finishing touches for your future home'
   ];
+
   public switchValues: number = 0;
+  public screen: string;
+
+  constructor(
+    private screenService: ScreenService
+  ) {
+    this.screen = this.screenService.getDevice();
+  }
 }

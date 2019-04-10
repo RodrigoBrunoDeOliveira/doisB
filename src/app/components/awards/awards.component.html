@@ -6,7 +6,8 @@
 
       <article class="awards-article">
         <div class="awards-figure">
-          <img src="../../../assets/images/img_01.webp">
+          <img *ngIf="screen === 'desktop'" src="../../../assets/images/img_01.webp">
+          <img *ngIf="screen === 'mobile' || screen === 'tablet'" src="../../../assets/images/img_01.jpg">
         </div>
       </article>
     </div>

@@ -5,7 +5,8 @@
 
     <article class="team-article">
       <div class="team-figure">
-        <img class="team-figure" src="../../../assets/images/ana.webp">
+        <img *ngIf="screen === 'desktop'" class="team-figure" src="../../../assets/images/ana.webp">
+        <img *ngIf="screen === 'mobile' || screen === 'tablet'" class="team-figure" src="../../../assets/images/ana.jpg">
       </div>
 
       <div class="team-body">
