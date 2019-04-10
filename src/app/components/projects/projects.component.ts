@@ -1,5 +1,6 @@
 import { Swiper } from './../../interfaces/swiper';
 import { Component } from '@angular/core';
+import { SwiperService } from 'src/app/services/swiper.service';
 
 @Component({
   selector: 'app-projects',
@@ -10,7 +11,7 @@ export class ProjectsComponent {
   public swiper: Swiper = [
     { 
       active: true,
-      img: '../../../assets/images/img_01.webp',
+      img: 'img_01',
       swiperData: {
         date: 'march 15, 2018',
         text: 'We have worked on this project for three months to completely extend and redesign the old 2-storey house.',
@@ -19,7 +20,7 @@ export class ProjectsComponent {
       }
     }, {
       active: false,
-      img: '../../../assets/images/img_02.webp',
+      img: 'img_02',
       swiperData: {
         date: 'JUNE 19, 2018',
         text: 'Our team of exterior designers and architects integrated the latest innovations in this residential project.',
@@ -28,7 +29,7 @@ export class ProjectsComponent {
       }
     }, {
       active: false,
-      img: '../../../assets/images/img_03.webp',
+      img: 'img_03',
       swiperData: {
         date: 'march 15, 2018',
         text: 'We have worked on this project for three months to completely extend and redesign the old 2-storey house.',
@@ -37,6 +38,12 @@ export class ProjectsComponent {
       }
     }
   ];
+
+  constructor(
+    private swiperService: SwiperService
+  ) {
+    this.swiper = this.swiperService.chooseImgage(this.swiper);
+  }
 
   public chooseSwiper(index: number): void {
     this.swiper.forEach(data => { data.active = false });

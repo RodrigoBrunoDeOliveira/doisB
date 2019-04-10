@@ -1,5 +1,6 @@
 import { Swiper } from './../../interfaces/swiper';
 import { Component } from '@angular/core';
+import { SwiperService } from 'src/app/services/swiper.service';
 
 @Component({
   selector: 'app-introduction',
@@ -8,11 +9,17 @@ import { Component } from '@angular/core';
 })
 export class IntroductionComponent {
   public swiper: Swiper = [
-    { active: true, img: '../../../assets/images/img_01.webp'},
-    { active: false, img: '../../../assets/images/img_02.webp'},
-    { active: false, img: '../../../assets/images/img_03.webp'},
+    { active: true, img: 'img_01'},
+    { active: false, img: 'img_02'},
+    { active: false, img: 'img_03'},
   ];
 
+  constructor(
+    private swiperService: SwiperService
+  ) {
+    this.swiper = this.swiperService.chooseImgage(this.swiper);
+  }
+  
   public backImg(): void {
     for(let i = 0; this.swiper.length >= i; i++) {
       if(this.swiper[i].active) {

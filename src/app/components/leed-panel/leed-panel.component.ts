@@ -26,8 +26,6 @@ export class LeedPanelComponent implements OnInit {
   }
 
   public invalidField(field: string): string {
-    console.log('data', this.form);
-
     if(!this.form.get(field).valid && this.submittedForm) return 'invalid';
   }
 

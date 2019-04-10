@@ -1,4 +1,4 @@
-import { Swiper, SwiperData } from './../../interfaces/swiper';
+import { Swiper } from './../../interfaces/swiper';
 import { Component, Input } from '@angular/core';
 
 // TODO: falta fazer trocar a imagem a cada 3s

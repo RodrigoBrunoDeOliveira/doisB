@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Swiper } from 'src/app/interfaces/swiper';
+import { SwiperService } from 'src/app/services/swiper.service';
 
 @Component({
   selector: 'app-comments',
@@ -10,7 +11,7 @@ export class CommentsComponent {
   public swiper: Swiper = [
     {
       active: true,
-      img: '../../../assets/images/img_01.webp',
+      img: 'img_01',
       swiperData: {
         name: 'KATE WILLIAMS',
         office: 'Entrepreneur',
@@ -18,7 +19,7 @@ export class CommentsComponent {
       }
     }, {
       active: false,
-      img: '../../../assets/images/img_02.webp',
+      img: 'img_02',
       swiperData: {
         name: 'ANN LEE',
         office: 'Freelancer',
@@ -26,12 +27,18 @@ export class CommentsComponent {
       }
     }, {
       active: false,
-      img: '../../../assets/images/img_03.webp',
+      img: 'img_03',
       swiperData: {
         name: 'SAM MCMILLAN',
         office: 'Manager',
         text: 'I selected Spectrum because of their architects’ rigorous design background and education. They exceeded my expectations and did a great a job on extending and redesigning my house.'
       }
     }
-  ]
+  ];
+
+  constructor(
+    private swiperService: SwiperService
+  ) {
+    this.swiper = this.swiperService.chooseImgage(this.swiper);
+  }
 }
