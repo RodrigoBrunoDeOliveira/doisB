@@ -1,6 +1,7 @@
 import { Swiper } from './../../interfaces/swiper';
 import { Component } from '@angular/core';
 import { SwiperService } from 'src/app/services/swiper.service';
+import { ScreenService } from 'src/app/services/screen.service';
 
 @Component({
   selector: 'app-introduction',
@@ -8,6 +9,7 @@ import { SwiperService } from 'src/app/services/swiper.service';
   styleUrls: ['./introduction.component.scss']
 })
 export class IntroductionComponent {
+  public screen: string;
   public swiper: Swiper = [
     { active: true, img: 'img_01'},
     { active: false, img: 'img_02'},
@@ -15,8 +17,10 @@ export class IntroductionComponent {
   ];
 
   constructor(
+    private screenService: ScreenService,
     private swiperService: SwiperService
   ) {
+    this.screen = this.screenService.getDevice();
     this.swiper = this.swiperService.chooseImgage(this.swiper);
   }
   

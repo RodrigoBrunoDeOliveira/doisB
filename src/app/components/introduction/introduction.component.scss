@@ -2,37 +2,21 @@
 
 .introduction {
 
+  @media (min-width: $tablet) {
+    display: flex;
+
+    app-swiper { width: 60%; }
+  }
+
   .introduction-contant {
     background-color: $black-03;
+
+    @media (min-width: $tablet) { width: 40%; }
 
     .introduction-container {
       padding: 30px 15px;
 
       // TODO: Linha de fundo
-      // &:before {
-      //   width: 54%;
-      //   border-width: 0 1px;
-      //   position: absolute;
-      //   content: '';
-      //   top: 0;
-      //   left: 50%;
-      //   bottom: 0;
-      //   border: 0 solid rgba(255, 255, 255, 0.05);
-      //   pointer-events: none;
-      //   z-index: -1;
-      // }
-      
-      // &:after {
-      //   border-left-width: 1px;
-      //   position: absolute;
-      //   content: '';
-      //   top: 0;
-      //   left: 50%;
-      //   bottom: 0;
-      //   border: 0 solid rgba(255,255,255,.05);
-      //   pointer-events: none;
-      //   z-index: -1;
-      // }
   
       .introduction-article {
         text-transform: uppercase;
@@ -46,6 +30,8 @@
           letter-spacing: -.02em;
           white-space: nowrap;
           color: $white-01;
+
+          @media (min-width: $tablet) { font-size: 35px; }
         }
 
         .introduction-subtitle {
@@ -76,31 +62,41 @@
       padding: 10px 15px;
       width: 100%;
       height: 48px;
-
-      .introduction-swiper {
-        display: flex;
-        margin: auto;
-        width: fit-content;
-
-        .introduction-swiper-left, .introduction-swiper-right {
-          border: 2px solid $grey-01;
-          border-radius: 50%;
-          width: 48px;
-          height: 48px;
-          font-size: 22px;
-          line-height: 44px;
-          color: $white-01;
-          will-change: transform;
-          transition: all .2s ease-in-out;
-          cursor: pointer;
-          z-index: 10;
-          text-align: center;
-
-          &:hover { color: $grey-01; }
-        }
-
-        .introduction-swiper-right { margin-left: 7px; }
-      }
     }
+  }
+}
+
+.introduction-swiper {
+  display: flex;
+  margin: auto;
+  width: fit-content;
+
+  .introduction-swiper-left, .introduction-swiper-right {
+    border: 2px solid $grey-01;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+    line-height: 44px;
+    color: $white-01;
+    will-change: transform;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    z-index: 10;
+    text-align: center;
+
+    &:hover { color: $grey-01; }
+  }
+
+  .introduction-swiper-right { margin-left: 7px; }
+}
+
+.introduction-arrow {
+  height: 100px;
+
+  .introduction-contro-panel {
+    width: 40%;
+    background-color: $black-07;
+    height: 100%;
   }
 }
