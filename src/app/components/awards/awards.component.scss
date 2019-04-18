@@ -4,14 +4,28 @@
   padding: 50px 0;
 
   .awards-container {
-    padding: 0 15px;
+		padding: 0 15px;
+	
+		@media (min-width: $tablet) { display: flex; }
 
-    .awards-article {
-			margin-top: 30px;
-			
-			.awards-figure img {
-				max-width: 100%;
-				border-radius: 7px;
+		.awards-header {
+			@media (min-width: $tablet) { width: 50%; }
+
+			.title {
+				font-size: 24px;
+
+				@media (min-width: $tablet) { font-size: 26px; }
+			}
+
+			.subtitle { font-size: 15px; }
+
+			.awards-article {
+				margin-top: 30px;
+				
+				.awards-figure img {
+					max-width: 100%;
+					border-radius: 7px;
+				}
 			}
 		}
 		
@@ -20,11 +34,18 @@
 			margin-bottom: 50px;
 			display: inline-block;
 
+			@media (min-width: $tablet) { width: 50%; }
+
 			.awards-resume {
 				width: calc(100% / 2);
-				display: inherit;
+				display: inline-block;
 
-				&:last-of-type {
+				@media (min-width: $tablet) {
+					margin: 0 auto;
+					display: grid;
+				}
+
+				&.last-resume {
 					margin: 0 auto;
 					display: block;
 				}

@@ -36,10 +36,19 @@
       color: $grey-03;
       counter-reset: li;
   
-      li.active {
-        color: $white-01;
-  
-        .steps-menu-list:before { color: $yellow-01; }
+      li {
+
+        @media (min-width: $tablet) {
+          display: inline-block;
+          width: calc((100vw - 94px) / 2);
+          vertical-align: text-top;
+        }
+
+        &.active {
+          color: $white-01;
+    
+          .steps-menu-list:before { color: $yellow-01; }
+        }
       }
   
       .steps-menu-list {

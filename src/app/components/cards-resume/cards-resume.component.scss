@@ -9,10 +9,15 @@
 		text-transform: uppercase;
 		font-weight: 700;
 
+		@media (min-width: $tablet) { display: flex; }
+
 		.resume-header-number { font-size: 32px; }
 
 		.cards-resume-title {
 			color: $black-04;
+			font-size: 15px;
+
+			@media (min-width: $tablet) { margin: 0 0 8px 16px; }
 
 			&:after {
 				display: block;
@@ -23,6 +28,8 @@
 				height: 4px;
 				margin-top: 6px;
 				background: $yellow-01;
+
+				@media (min-width: $tablet) { margin-left: 0; }
 			}
 		}
 	}

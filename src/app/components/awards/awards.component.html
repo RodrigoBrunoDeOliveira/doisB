@@ -29,16 +29,20 @@
         ></app-cards-resume>
       </div>
 
-      <div class="awards-resume">
+      <div class="awards-resume last-resume">
         <app-cards-resume
           [number]="11"
           text='Spectrum has been awarded for creativity many times.'
           title='awards'
         ></app-cards-resume>
       </div>
+
+      <div class="awards-footer" *ngIf="screen === 'mobile' || screen === 'tablet'">
+        <a class="awards-button">contact us</a>
+      </div>
     </div>
 
-    <div class="awards-footer">
+    <div class="awards-footer" *ngIf="screen === 'desktop'">
       <a class="awards-button">contact us</a>
     </div>
   </div>

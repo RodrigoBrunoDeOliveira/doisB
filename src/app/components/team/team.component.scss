@@ -30,6 +30,14 @@
 		.team-article {
 			margin-top: 30px;
 
+			@media (min-width: $tablet) {
+				display: flex;
+
+				.team-left, .team-right { width: 50%; }
+
+				.team-right p { padding: 0 15px; }
+			}
+
 			.team-figure {
 				display: grid;
 
