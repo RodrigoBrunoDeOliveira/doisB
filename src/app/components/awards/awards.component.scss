@@ -3,6 +3,7 @@
 .awards {
   padding: 50px 0;
 
+  @media (min-width: $tablet) { background-image: url(../../../assets/images/bkg_01.png) }
   .awards-container {
 		padding: 0 15px;
 	
