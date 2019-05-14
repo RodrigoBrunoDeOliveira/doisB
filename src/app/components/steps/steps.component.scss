@@ -38,7 +38,7 @@
   
       li {
 
-        @media (min-width: $tablet) {
+        @media #{$tablet, $desktop} {
           display: inline-block;
           width: calc((100vw - 94px) / 2);
           vertical-align: text-top;

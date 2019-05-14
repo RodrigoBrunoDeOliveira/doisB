@@ -47,6 +47,6 @@
     -webkit-text-size-adjust: none;
 		-webkit-font-smoothing: subpixel-antialiased;
 		
-		@media (min-width: $tablet) { font-size: 14px; }
+		@media #{$tablet, $desktop} { font-size: 14px; }
 	}
 }

@@ -2,7 +2,7 @@
 
 .introduction {
 
-  @media (min-width: $tablet) {
+  @media #{$tablet, $desktop} {
     display: flex;
 
     app-swiper { width: 60%; }
@@ -11,7 +11,7 @@
   .introduction-contant {
     background-color: $black-03;
 
-    @media (min-width: $tablet) { width: 40%; }
+    @media #{$tablet, $desktop} { width: 40%; }
 
     .introduction-container {
       padding: 30px 15px;
@@ -31,7 +31,7 @@
           white-space: nowrap;
           color: $white-01;
 
-          @media (min-width: $tablet) { font-size: 35px; }
+          @media #{$tablet, $desktop} { font-size: 35px; }
         }
 
         .introduction-subtitle {

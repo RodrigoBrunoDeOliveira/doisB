@@ -12,18 +12,35 @@
       padding-bottom: 24px;
       text-transform: uppercase;
 
-      h1 {
-        font-size: 32px;
+      @media #{$tablet, $desktop} { display: flex; }
 
-        span { font-weight: 300; }
+      .projects-header-left {
+        @media #{$tablet, $desktop} { width: 40%; }
+
+        h1 {
+          font-size: 32px;
+  
+          @media #{$tablet, $desktop} { font-size: 40px; }
+  
+          span { font-weight: 300; }
+        }
       }
 
-      p {
-        font-size: 13px;
-        line-height: 1.6;
-        font-weight: 400;
-        letter-spacing: -.02em;
-        color: $shadow-01;
+      .projects-header-right {
+        @media #{$tablet, $desktop} { width: 60%; }
+
+        p {
+          font-size: 13px;
+          line-height: 1.6;
+          font-weight: 400;
+          letter-spacing: -.02em;
+          color: $shadow-01;
+
+          @media #{$tablet, $desktop} {
+            margin: 0;
+            text-align: left;
+          }
+        }
       }
     }
 

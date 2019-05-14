@@ -3,19 +3,19 @@
 .awards {
   padding: 50px 0;
 
-  @media (min-width: $tablet) { background-image: url(../../../assets/images/bkg_01.png) }
+  @media #{$tablet, $desktop} { background-image: url(../../../assets/images/bkg_01.png) }
   .awards-container {
 		padding: 0 15px;
 	
-		@media (min-width: $tablet) { display: flex; }
+		@media #{$tablet, $desktop} { display: flex; }
 
 		.awards-header {
-			@media (min-width: $tablet) { width: 50%; }
+			@media #{$tablet, $desktop} { width: 50%; }
 
 			.title {
 				font-size: 24px;
 
-				@media (min-width: $tablet) { font-size: 26px; }
+				@media #{$tablet, $desktop} { font-size: 26px; }
 			}
 
 			.subtitle { font-size: 15px; }
@@ -35,13 +35,13 @@
 			margin-bottom: 50px;
 			display: inline-block;
 
-			@media (min-width: $tablet) { width: 50%; }
+			@media #{$tablet, $desktop} { width: 50%; }
 
 			.awards-resume {
 				width: calc(100% / 2);
 				display: inline-block;
 
-				@media (min-width: $tablet) {
+				@media #{$tablet, $desktop} {
 					margin: 0 auto;
 					display: grid;
 				}

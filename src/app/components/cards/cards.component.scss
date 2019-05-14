@@ -3,7 +3,7 @@
 .cards {
   padding: 50px 0;
 
-  @media (min-width: $tablet) {
+  @media #{$tablet, $desktop} {
     display: flex;
     background-image: url(../../../assets/images/bkg_01.png);
     background-size: 100% 100%;
@@ -13,7 +13,7 @@
   .cards-blocks {
     margin-bottom: 40px;
 
-    @media (min-width: $tablet) { margin: auto; }
+    @media #{$tablet, $desktop} { margin: auto; }
   }
   .cards-panel { margin-bottom: 50px; }
 }
