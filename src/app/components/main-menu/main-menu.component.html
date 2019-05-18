@@ -1,10 +1,14 @@
-<nav class="main-menu">
+<nav class="main-menu" [class.open]="open">
   <ul class="menu-list">
     <li class="menu-list-item">Home</li>
-    <li class="menu-list-item">About</li>
+    <li class="menu-list-item" (click)="scrolling('comments')">About</li>
     <li class="menu-list-item">Team</li>
     <li class="menu-list-item">Portfolio</li>
     <li class="menu-list-item">Contacts</li>
-    <li class="menu-list-item">(41) 98418-6477</li>
   </ul>
+
+  <div class="menu-number">
+    <i class="fas fa-mobile-alt"></i>
+    <span>(41) 98418-6477</span>
+  </div>
 </nav>

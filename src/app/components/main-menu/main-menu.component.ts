@@ -6,4 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./main-menu.component.scss']
 })
 export class MainMenuComponent {
+  @Input() open: boolean;
 }
