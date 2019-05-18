@@ -3,4 +3,11 @@
 <header class="main-header">
   <img src="../../../assets/images/logo.png">
   <h1>DOIS B</h1>
+
+  <!-- TODO: Fazer burguer menu e animação -->
+  <button class="menu-btn" (click)="open = !open">
+    <span class="first-bar" [class.active]="open"></span>
+    <span class="second-bard" [class.active]="open"></span>
+    <span class="third-bar" [class.active]="open"></span>
+  </button>
 </header>

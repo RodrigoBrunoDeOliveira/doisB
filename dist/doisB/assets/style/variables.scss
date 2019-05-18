@@ -30,4 +30,5 @@ $white-02: #F5F5F5;
 $yellow-01: #c4956a;
 
 // Screen
-$tablet: 768px;
+$tablet: (min-width: 768px) and (max-width: 1023px);
+$desktop: (min-width: 1024px);

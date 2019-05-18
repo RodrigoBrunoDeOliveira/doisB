@@ -7,6 +7,7 @@
   height: 48px;
   display: flex;
   padding: 16px;
+  position: fixed;
 
   img {
     max-width: 20px;
@@ -18,5 +19,23 @@
     color: $white-01;
 		font-size: 30px;
 		margin: auto 0 auto 16px; 
+  }
+
+  .menu-btn {
+    cursor: pointer;
+
+    span {
+      border-bottom: 2px solid $white-01;
+      width: 35px;
+      display: block;
+      margin-bottom: 10px;
+      transition-duration: 1s;
+
+      &.first-bar.active { transform: rotate(405deg) translate(7px, 9px); }
+
+      &.second-bard.active { opacity: 0; }
+
+      &.third-bar.active { transform: rotate(-405deg) translate(8px, -11px); }
+    }
   }
 }

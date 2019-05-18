@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './main-header.component.html',
   styleUrls: ['./main-header.component.scss']
 })
-export class MainHeaderComponent { }
+export class MainHeaderComponent {
+  open: boolean = false;
+}

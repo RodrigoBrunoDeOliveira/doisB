@@ -17,7 +17,8 @@ import { CommentsComponent } from './components/comments/comments.component';
 import { SwiperProfileComponent } from './components/swiper-profile/swiper-profile.component';
 import { MainFooterComponent } from './components/main-footer/main-footer.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { NgxMaskModule } from 'ngx-mask'
+import { NgxMaskModule } from 'ngx-mask';
+import { MainMenuComponent } from './components/main-menu/main-menu.component'
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { NgxMaskModule } from 'ngx-mask'
     ProjectsComponent,
     CommentsComponent,
     SwiperProfileComponent,
-    MainFooterComponent
+    MainFooterComponent,
+    MainMenuComponent
   ],
   exports: [],
   imports: [

@@ -1,0 +1,10 @@
+@import 'variables';
+
+.main-menu {
+	background-color: $white-01;
+	position: absolute;
+	height: calc(100vh - 80px);
+	width: 40vw;
+	left: 0;
+	top: 80px;
+}
